@@ -63,6 +63,31 @@
  ],
  "custom_perms": [],
  "doctype": "Healthcare Practitioner",
- "property_setters": [],
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2021-10-02 18:26:23.540206",
+   "default_value": null,
+   "doc_type": "Healthcare Practitioner",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "naming_series",
+   "idx": 0,
+   "modified": "2021-10-02 18:26:23.540206",
+   "modified_by": "Administrator",
+   "name": "Healthcare Practitioner-naming_series-options",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "options",
+   "property_type": "Text",
+   "row_name": null,
+   "value": "HLC-PRAC-.YYYY.-"
+  }
+ ],
  "sync_on_migrate": 1
 }
