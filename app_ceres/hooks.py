@@ -96,6 +96,14 @@ app_license = "MIT"
 # 		"on_trash": "method"
 #	}
 # }
+doc_events = {
+    "Patient Encounter": {        
+        "before_insert":"pp_ceres.app_ceres.ceres.controllers.paciente.generarSecuenciaReceta"
+        # "on_update":" "
+    } 
+
+}
+
 
 # Scheduled Tasks
 # ---------------
