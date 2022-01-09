@@ -98,7 +98,7 @@ app_license = "MIT"
 # }
 doc_events = {
     "Patient Encounter": {        
-        "before_insert":"pp_ceres.app_ceres.ceres.controllers.paciente.generarSecuenciaReceta"
+        "before_insert":"app_ceres.ceres.controllers.paciente.generarSecuenciaReceta"
         # "on_update":" "
     } 
 
