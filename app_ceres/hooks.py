@@ -181,3 +181,7 @@ user_data_fields = [
 # 	"app_ceres.auth.validate"
 # ]
 
+website_context = {
+"favicon": "/assets/erpnext/images/erpnext-logo.png",
+"splash_image": "/assets/erpnext/images/erpnext-logo.png"
+}
