@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:grupoedad",
+ "creation": "2022-03-16 23:05:07.739669",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "grupoedad",
+  "rango_inicial",
+  "rango_final",
+  "1st",
+  "5th",
+  "10th",
+  "50th",
+  "90th",
+  "95th",
+  "99th"
+ ],
+ "fields": [
+  {
+   "fieldname": "grupoedad",
+   "fieldtype": "Data",
+   "label": "Grupo Edad",
+   "unique": 1
+  },
+  {
+   "fieldname": "rango_inicial",
+   "fieldtype": "Int",
+   "label": "Rango Inicial"
+  },
+  {
+   "fieldname": "rango_final",
+   "fieldtype": "Int",
+   "label": "Rango Final"
+  },
+  {
+   "fieldname": "1st",
+   "fieldtype": "Int",
+   "label": "1st"
+  },
+  {
+   "fieldname": "5th",
+   "fieldtype": "Int",
+   "label": "5th"
+  },
+  {
+   "fieldname": "10th",
+   "fieldtype": "Int",
+   "label": "10th"
+  },
+  {
+   "fieldname": "50th",
+   "fieldtype": "Int",
+   "label": "50th"
+  },
+  {
+   "fieldname": "90th",
+   "fieldtype": "Int",
+   "label": "90th"
+  },
+  {
+   "fieldname": "95th",
+   "fieldtype": "Int",
+   "label": "95th"
+  },
+  {
+   "fieldname": "99th",
+   "fieldtype": "Int",
+   "label": "99th"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-19 09:12:27.555394",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "FrecuenciaRespiratoriaPC",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

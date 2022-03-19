@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:grupoedad",
+ "creation": "2022-03-16 15:19:07.154138",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "grupoedad",
+  "rango_inicial",
+  "rango_final",
+  "1st",
+  "5th",
+  "10th",
+  "50th",
+  "90th",
+  "95th",
+  "99th"
+ ],
+ "fields": [
+  {
+   "fieldname": "grupoedad",
+   "fieldtype": "Data",
+   "label": "Grupo Edad",
+   "unique": 1
+  },
+  {
+   "fieldname": "rango_inicial",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Rango Inicial"
+  },
+  {
+   "fieldname": "rango_final",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Rango Final"
+  },
+  {
+   "fieldname": "1st",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "1st"
+  },
+  {
+   "fieldname": "5th",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "5th"
+  },
+  {
+   "fieldname": "10th",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "10th"
+  },
+  {
+   "fieldname": "50th",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "50th"
+  },
+  {
+   "fieldname": "90th",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "90th"
+  },
+  {
+   "fieldname": "95th",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "95th"
+  },
+  {
+   "fieldname": "99th",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "99th"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-19 09:12:50.339414",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "Frecuencia Cardiaca PC",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
