@@ -8,12 +8,8 @@ def get_context(context):
     context.allow_guest = True
     context.no_breadcrumbs = True
 
-def get_context(context):
-    context.show_search = True
-    context.allow_guest = True
-    context.no_breadcrumbs = True
 
-@frappe.whitelist(allow_guest=True)
+@frappe.whitelist(allow_guest=False)
 def lesignosvitales(name):
     values = {'name': name}
     return frappe.db.sql(""" SELECT edad_meses, (height*100) as estatura
