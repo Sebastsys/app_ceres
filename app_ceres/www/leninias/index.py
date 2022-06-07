@@ -13,6 +13,6 @@ def get_context(context):
 def lesignosvitales(name):
     values = {'name': name}
     return frappe.db.sql(""" SELECT edad_meses, (height*100) as estatura
-                        FROM dbceres.`tabVital Signs`
+                        FROM ceresdb.`tabVital Signs`
                         WHERE patient_name = %(name)s
                          """, values=values, as_dict=0)
