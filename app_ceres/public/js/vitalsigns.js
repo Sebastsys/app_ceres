@@ -99,9 +99,9 @@ frappe.ui.form.on("Vital Signs", "estatura_vs_edad", function(frm, cdt, cdn){
 	}).done((r)=>{
 		sexo=r.message[0];
 		if(sexo ==="Male"){
-			var myWin = window.open('http://192.168.100.174:82/leninios?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
+			var myWin = window.open('https://erpceres.site:8082/leninios?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
 		}else if(sexo ==="Female"){
-			var myWin = window.open('http://192.168.100.174:82/leninias?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
+			var myWin = window.open('https://erpceres.site:8082/leninias?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
 		}
 	})
             
@@ -118,9 +118,9 @@ frappe.ui.form.on("Vital Signs", "pc_vs_edad", function(frm, cdt, cdn){
 	}).done((r)=>{
 		sexo=r.message[0];
 		if(sexo ==="Male"){
-			var myWin = window.open('http://192.168.100.174:82/pcninios?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
+			var myWin = window.open('https://erpceres.site:8082/pcninios?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
 		}else if(sexo ==="Female"){
-			var myWin = window.open('http://192.168.100.174:82/pcninias?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
+			var myWin = window.open('https://erpceres.site:8082/pcninias?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
 		}
 	})
             
@@ -139,16 +139,16 @@ frappe.ui.form.on("Vital Signs", "peso_vs_edad", function(frm, cdt, cdn){
 		sexo=r.message[0];
 		if(sexo ==="Male"){
 			if(locals[cdt][cdn].edad_meses<=24){
-				var myWin = window.open('http://192.168.100.174:82/peninios?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
+				var myWin = window.open('https://erpceres.site:8082/peninios?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
 			}else{
-				var myWin = window.open('http://192.168.100.174:82/peninios2-20?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
+				var myWin = window.open('https://erpceres.site:8082/peninios2-20?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
 			}
 			
 		}else if(sexo ==="Female"){
 			if(locals[cdt][cdn].edad_meses<=24){
-				var myWin = window.open('http://192.168.100.174:82/peninias?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
+				var myWin = window.open('https://erpceres.site:8082/peninias?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
 			}else{
-				var myWin = window.open('http://192.168.100.174:82/peninias2-20?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
+				var myWin = window.open('https://erpceres.site:8082/peninias2-20?codigovitalsign='+cur_frm.doc.patient_name+'&_lang=en');
 			}
 		}
 	})
