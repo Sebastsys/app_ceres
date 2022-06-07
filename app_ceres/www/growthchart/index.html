@@ -11,8 +11,8 @@
     var edad = url.searchParams.get("edad");
     console.log(peso);
     var patientGrowth = [
-      [peso, edad],
-      /*[6.17, 7.2],
+      //[peso, edad],
+      [1.8, 1.5],
       [6.9, 7.3],
       [8.03, 7.0],
       [9.37, 7.2],
@@ -26,14 +26,19 @@
       [22.23, 7.5],
       [24.2, 8.2],
       [26.07, 9.6],
-      [28.4, 9.5],*/
-      // [30, 9.4],
-      // [31, 10.7],
-      // [32, 12.1],
-      // [33, 13.8],
-      // [60, 18.3],
+      [28.4, 9.5]
+      //[30, 9.4],
+      //[31, 10.7],
+      //[32, 12.1],
+      //[33, 13.8],
+      //[60, 18.3],
     ];
-    var growthChart = display_growth_chart(patientGrowth, 'body' , 'hcfa_boys_0_to_5');
+    var growthChart = display_growth_chart(patientGrowth, 'todos' , 'hcfa_boys_0_to_5');
   </script>
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="todos" name="todos" class="todos"></div>
+    </div>
+  </div>
 </body>
 </html>

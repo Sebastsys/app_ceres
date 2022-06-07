@@ -88,3 +88,18 @@ where
     else:
             mensage = "-"
     return mensage
+
+
+
+@frappe.whitelist()
+def edadmeses(paciente):
+    values = {'paciente': paciente}
+    fechanac = """ SELECT TIMESTAMPDIFF(MONTH , (select  dob from  tabPatient tp where tp.patient_name = '{0}' ) , CURDATE()) as edadmeses """.format(paciente)
+    return  frappe.db.sql(fechanac, as_dict=False)[0]
+#frappe.db.sql(""" SELECT dob from tabPatient tp where tp.patient_name = %(paciente)s""", values=values, as_dict=1)
+
+
+@frappe.whitelist()
+def sexo(paciente):
+    sexo = """ SELECT tp.sex FROM tabPatient tp WHERE tp.patient_name = '{0}' """.format(paciente)
+    return  frappe.db.sql(sexo, as_dict=False)[0]
