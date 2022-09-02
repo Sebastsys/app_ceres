@@ -16,10 +16,19 @@ def generarSecuenciaReceta(doc,method):
     doc.numero_receta = nreceta    
     doctor.nreceta_siguiente = nreceta + 1
     doctor.save()
+def generarSecuenciaHC(doc,method):
+    
+    paciente = frappe.db.sql("""select max(CAST(hc AS UNSIGNED)) as hc from tabPatient""", as_dict=False)
+    nhc = int(paciente[0][0])
+    
+    nhc=nhc+1
+        
+    doc.hc = str(nhc)
+    #paciente.save()
     
 @frappe.whitelist()
 def obtenerPercentilCardiaca(paciente,valor):
-    edad = """ SELECT TIMESTAMPDIFF(MONTH , (select  dob from  tabPatient tp where name = '{0}' ) , CURDATE()) as edadmeses""".format(paciente)
+    edad = """ SELECT TIMESTAMPDIFF(MONTH , (select dob from tabPatient tp where name = '{0}' ) , CURDATE()) as edadmeses""".format(paciente)
     
     res1 = frappe.db.sql(edad, as_dict=True)[0]
     mensage = ""

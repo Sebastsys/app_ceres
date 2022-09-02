@@ -8,8 +8,14 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "sebas.franksys@gmail.com"
 app_license = "MIT"
+app_logo_url = "/assets/app_ceres/img/LogoClamMedical.png"
 
 # Includes in <head>
+# ------------------
+website_context = {
+"favicon": "/assets/app_ceres/img/LogoClamMedical.png",
+"splash_image": "/assets/app_ceres/img/LogoClamMedical.png"
+}
 # ------------------
 
 # include js, css files in header of desk.html
@@ -101,7 +107,10 @@ doc_events = {
     "Patient Encounter": {        
         "before_insert":"app_ceres.ceres.controllers.paciente.generarSecuenciaReceta"
         # "on_update":" "
-    } 
+    } ,
+    "Patient":{
+		"before_insert":"app_ceres.ceres.controllers.paciente.generarSecuenciaHC"
+	}
 
 }
 
@@ -182,7 +191,7 @@ user_data_fields = [
 # 	"app_ceres.auth.validate"
 # ]
 
-website_context = {
-"favicon": "/assets/erpnext/images/erpnext-logo.png",
-"splash_image": "/assets/erpnext/images/erpnext-logo.png"
-}
+#website_context = {
+#"favicon": "/assets/erpnext/images/erpnext-logo.png",
+#"splash_image": "/assets/erpnext/images/erpnext-logo.png"
+#}
