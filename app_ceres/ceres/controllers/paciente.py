@@ -19,13 +19,13 @@ def generarSecuenciaReceta(doc,method):
 def generarSecuenciaHC(doc,method):
     
     paciente = frappe.db.sql("""select max(CAST(hc AS UNSIGNED)) as hc from tabPatient""", as_dict=False)
-    if frappe.db.count('Patient')<1:
-        nhc = int(paciente[0][0])
-    else:
-        nhc=0
-    nhc=nhc+1
+    #if frappe.db.count('Patient')<1:
+    #    nhc = int(paciente[0][0])
+    #else:
+    #    nhc=0
+    #nhc=nhc+1
         
-    doc.hc = str(nhc)
+    #doc.hc = str(nhc)
     #paciente.save()
     
 @frappe.whitelist()
