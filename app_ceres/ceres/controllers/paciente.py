@@ -21,8 +21,10 @@ def generarSecuenciaHC(doc,method):
     paciente = frappe.db.sql("""select max(CAST(hc AS UNSIGNED)) as hc from tabPatient""", as_dict=False)
     
     nhc = int(paciente[0][0])
-    nhc=0
-    nhc=nhc+1
+    if not nhc:
+        nhc=0
+    else:
+        nhc=nhc+1
         
     doc.hc = str(nhc)
     #paciente.save()
