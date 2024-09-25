@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-25 00:24:48.511382",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "historia_clinica"
+ ],
+ "fields": [
+  {
+   "fieldname": "historia_clinica",
+   "fieldtype": "Int",
+   "label": "Historia Clinica"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-25 00:26:13.713444",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "NumHistoriaClinica",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

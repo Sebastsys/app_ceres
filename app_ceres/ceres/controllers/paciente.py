@@ -7,27 +7,26 @@ def generarSecuenciaReceta(doc,method):
     
     doctor = frappe.get_doc("Healthcare Practitioner",doc.practitioner)
     nreceta = doctor.nreceta_siguiente    
-    
     #nrecetaobj = frappe.db.get_single_value('NumeroReceta', 'numero_de_receta')
- 
     #if not nreceta:
      #   nreceta = 1 
-        
     doc.numero_receta = nreceta    
     doctor.nreceta_siguiente = nreceta + 1
     doctor.save()
 def generarSecuenciaHC(doc,method):
+    numrows=frappe.db.sql(""" select count(name) as numero from tabPatient """, as_dict=False)
+    paciente=0
+    nhc=0
     
-    paciente = frappe.db.sql("""select max(CAST(hc AS UNSIGNED)) as hc from tabPatient""", as_dict=False)
-    
-    nhc = int(paciente[0][0])
-    if not nhc:
-        nhc=0
-    else:
-        nhc=nhc+1
+    #frappe.throw(str(numrows[0][0]))
+    if int(numrows[0][0])==0:
+        nhc = 1
+    if int(numrows[0][0])>0:
+        paciente = frappe.db.sql("""select max(CAST(hc AS SIGNED INTEGER)) as hc from tabPatient""", as_dict=False)
+        nhc=int(paciente[0][0])+1
         
     doc.hc = str(nhc)
-    #paciente.save()
+    #doc.save()
     
 @frappe.whitelist()
 def obtenerPercentilCardiaca(paciente,valor):
