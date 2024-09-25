@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-25 16:06:51.177517",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pedidos_section",
+  "codigo",
+  "pedido",
+  "column_break_yiod",
+  "num_sesiones",
+  "descripcion"
+ ],
+ "fields": [
+  {
+   "fieldname": "pedidos_section",
+   "fieldtype": "Section Break",
+   "label": "Pedidos"
+  },
+  {
+   "fieldname": "codigo",
+   "fieldtype": "Data",
+   "label": "Codigo"
+  },
+  {
+   "fieldname": "pedido",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pedido",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yiod",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "num_sesiones",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Num Sesiones"
+  },
+  {
+   "fieldname": "descripcion",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Descripcion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-25 16:45:37.526412",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "Pedidos",
+ "owner": "Administrator",
+ "permissions": [],
+ "search_fields": "pedido",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "pedido"
+}
