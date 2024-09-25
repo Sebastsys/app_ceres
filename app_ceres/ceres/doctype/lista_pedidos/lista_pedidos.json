@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:pedido",
+ "creation": "2024-09-25 17:31:35.061813",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pedido",
+  "num_sesiones",
+  "descripcion"
+ ],
+ "fields": [
+  {
+   "fieldname": "pedido",
+   "fieldtype": "Data",
+   "label": "Pedido",
+   "unique": 1
+  },
+  {
+   "fieldname": "num_sesiones",
+   "fieldtype": "Int",
+   "label": "Num Sesiones"
+  },
+  {
+   "fieldname": "descripcion",
+   "fieldtype": "Data",
+   "label": "Descripcion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-25 17:36:17.885703",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "Lista pedidos",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

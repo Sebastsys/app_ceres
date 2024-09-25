@@ -3,6 +3,7 @@
  "allow_rename": 1,
  "creation": "2024-09-25 16:06:51.177517",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "pedidos_section",
@@ -25,9 +26,10 @@
   },
   {
    "fieldname": "pedido",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Pedido",
+   "options": "Lista pedidos",
    "reqd": 1
   },
   {
@@ -50,7 +52,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-09-25 16:45:37.526412",
+ "modified": "2024-09-25 17:40:41.858461",
  "modified_by": "Administrator",
  "module": "CERES",
  "name": "Pedidos",
