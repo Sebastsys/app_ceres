@@ -11,12 +11,13 @@ def generarSecuenciaReceta(doc,method):
     #if not nreceta:
      #   nreceta = 1 
     if doc.custom_con_numeración:
+        doctor.nreceta_siguiente = 0
+        doctor.save()
+    else:
         doc.numero_receta = nreceta    
         doctor.nreceta_siguiente = nreceta + 1
         doctor.save()
-    else:
-        doctor.nreceta_siguiente = 0
-        doctor.save()
+        
 def generarSecuenciaHC(doc,method):
     numrows=frappe.db.sql(""" select count(name) as numero from tabPatient """, as_dict=False)
     paciente=0
