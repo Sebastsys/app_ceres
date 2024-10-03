@@ -11,7 +11,7 @@ def generarSecuenciaReceta(doc,method):
     #if not nreceta:
      #   nreceta = 1 
     if doc.custom_sin_numero_receta:
-        doc.custom_sin_numero_receta=0
+        doc.numero_receta=0
     else:
         doc.numero_receta = nreceta    
         doctor.nreceta_siguiente = nreceta + 1
