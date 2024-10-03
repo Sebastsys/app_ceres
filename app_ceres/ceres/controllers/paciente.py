@@ -10,9 +10,8 @@ def generarSecuenciaReceta(doc,method):
     #nrecetaobj = frappe.db.get_single_value('NumeroReceta', 'numero_de_receta')
     #if not nreceta:
      #   nreceta = 1 
-    if doc.custom_con_numeración:
-        doctor.nreceta_siguiente = 0
-        doctor.save()
+    if doc.custom_sin_numero_receta:
+        doc.custom_sin_numero_receta=0
     else:
         doc.numero_receta = nreceta    
         doctor.nreceta_siguiente = nreceta + 1
