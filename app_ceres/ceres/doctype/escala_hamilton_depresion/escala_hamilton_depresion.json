@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-11-19 23:04:40.297934",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient",
+  "patient_name",
+  "column_break_rxkc",
+  "encuentro_psicologico",
+  "descripcion",
+  "fecha",
+  "section_break_jonz",
+  "table_mhdv"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "SECUENCIA",
+   "options": "HLC-ENCP-.YYYY.-"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Read Only",
+   "label": "Nombre Paciente"
+  },
+  {
+   "fieldname": "column_break_rxkc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "encuentro_psicologico",
+   "fieldtype": "Link",
+   "label": "Encuentro Psicologo",
+   "options": "Encuentro Psicologo"
+  },
+  {
+   "fetch_from": "encuentro_psicologico.descripcion_del_encuentro",
+   "fieldname": "descripcion",
+   "fieldtype": "Read Only",
+   "label": "Descripcion"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "section_break_jonz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_mhdv",
+   "fieldtype": "Table",
+   "options": "TABLA EH DEPRESION"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Paciente",
+   "options": "Patient"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-12 09:43:09.968973",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "ESCALA HAMILTON DEPRESION",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

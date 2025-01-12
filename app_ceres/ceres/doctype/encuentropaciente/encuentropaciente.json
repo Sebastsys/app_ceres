@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-11-21 22:46:35.080809",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "detalles_tab",
+  "naming_series",
+  "paciente",
+  "no_de_cedula",
+  "column_break_vqdm",
+  "psicologo",
+  "nombre",
+  "fecha",
+  "dashboard_tab",
+  "tab_3_tab",
+  "autocomplete"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-PAT-.YYYY.-",
+   "print_hide": 1,
+   "report_hide": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "paciente",
+   "fieldtype": "Link",
+   "label": "Paciente",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "paciente.no_identificacion",
+   "fieldname": "no_de_cedula",
+   "fieldtype": "Read Only",
+   "label": "No de Cedula"
+  },
+  {
+   "fieldname": "column_break_vqdm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "psicologo",
+   "fieldtype": "Link",
+   "label": "Psicologo",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "psicologo.practitioner_name",
+   "fieldname": "nombre",
+   "fieldtype": "Read Only",
+   "label": "Nombre"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "detalles_tab",
+   "fieldtype": "Tab Break",
+   "label": "Detalles"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "dashboard_tab",
+   "fieldtype": "Tab Break",
+   "label": "Dashboard",
+   "show_dashboard": 1
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "tab_3_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 3"
+  },
+  {
+   "fieldname": "autocomplete",
+   "fieldtype": "Autocomplete",
+   "label": "Autocomplete"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-21 23:19:04.138829",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "EncuentroPaciente",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

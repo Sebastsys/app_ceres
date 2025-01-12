@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-11-19 17:33:16.096085",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient",
+  "patient_name",
+  "column_break_peca",
+  "encuentro_psicologico",
+  "descripcion_encuentro",
+  "fecha_sesion",
+  "section_break_xjre",
+  "eh_ansiedad"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-EHA-.YYYY.-"
+  },
+  {
+   "fieldname": "column_break_peca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Paciente",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Nombre Paciente"
+  },
+  {
+   "fieldname": "encuentro_psicologico",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "Encuentro Psicologico",
+   "options": "Encuentro Psicologo"
+  },
+  {
+   "fetch_from": "encuentro_psicologico.descripcion_del_encuentro",
+   "fieldname": "descripcion_encuentro",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Descripcion encuentro",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fecha_sesion",
+   "fieldtype": "Date",
+   "label": "Fecha Sesion"
+  },
+  {
+   "fieldname": "section_break_xjre",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "eh_ansiedad",
+   "fieldtype": "Table",
+   "label": "EH ANSIEDAD",
+   "options": "Tabla EH ANSIEDAD"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-11 23:04:21.675693",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "Escala Hamilton Ansiedad",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

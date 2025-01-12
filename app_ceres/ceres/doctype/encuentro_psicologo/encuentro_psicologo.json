@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-11-19 16:50:05.008057",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "detalles_tab",
+  "naming_series",
+  "patient",
+  "patient_name",
+  "cedula",
+  "edad",
+  "column_break_jcqf",
+  "practitioner",
+  "practitioner_name",
+  "medical_department",
+  "fecha",
+  "section_break_ydpa",
+  "descripcion_del_encuentro",
+  "motivo_consulta",
+  "examen_mental",
+  "presunto_diagnostico",
+  "column_break_ddyo",
+  "instrumentos_utilizados",
+  "observaciones",
+  "plan_terapeutico",
+  "dashboard_tab",
+  "tab_3_tab",
+  "autocomplete_dpvx"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-ENCP-.YYYY.-"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Paciente",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jcqf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "label": "Nombre Paciente",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.no_identificacion",
+   "fieldname": "cedula",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "label": "Cedula"
+  },
+  {
+   "fieldname": "edad",
+   "fieldtype": "Data",
+   "label": "Edad"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "Healtcare Practitioner",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "practitioner.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Practitioner Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "medical_department",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Dpto. Medico",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ydpa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "motivo_consulta",
+   "fieldtype": "Small Text",
+   "label": "Motivo Consulta"
+  },
+  {
+   "fieldname": "examen_mental",
+   "fieldtype": "Small Text",
+   "label": "Examen Mental"
+  },
+  {
+   "fieldname": "presunto_diagnostico",
+   "fieldtype": "Small Text",
+   "label": "Presunto Diagnostico"
+  },
+  {
+   "fieldname": "column_break_ddyo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instrumentos_utilizados",
+   "fieldtype": "Small Text",
+   "label": "Instrumentos utilizados"
+  },
+  {
+   "fieldname": "observaciones",
+   "fieldtype": "Small Text",
+   "label": "Observaciones"
+  },
+  {
+   "fieldname": "plan_terapeutico",
+   "fieldtype": "Small Text",
+   "label": "Plan terapeutico"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "descripcion_del_encuentro",
+   "fieldtype": "Data",
+   "label": "Descripcion del Encuentro"
+  },
+  {
+   "fieldname": "dashboard_tab",
+   "fieldtype": "Tab Break",
+   "label": "Dashboard",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "tab_3_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 3"
+  },
+  {
+   "fieldname": "autocomplete_dpvx",
+   "fieldtype": "Autocomplete"
+  },
+  {
+   "fieldname": "detalles_tab",
+   "fieldtype": "Tab Break",
+   "label": "Detalles"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-11 23:01:03.731534",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "Encuentro Psicologo",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
