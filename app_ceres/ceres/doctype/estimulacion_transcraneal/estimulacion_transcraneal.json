@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{encuentro_psicologo}-{####}",
+ "creation": "2025-01-30 00:25:25.973741",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "paciente",
+  "patient_name",
+  "numero_sesion",
+  "puntos",
+  "column_break_oazx",
+  "encuentro_psicologo",
+  "descripcion_encuentro",
+  "fecha_encuentro",
+  "suma_puntuacion",
+  "section_break_yhov",
+  "table_yffy"
+ ],
+ "fields": [
+  {
+   "fieldname": "paciente",
+   "fieldtype": "Link",
+   "label": "Paciente",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "paciente.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Read Only",
+   "label": "Nombre Paciente"
+  },
+  {
+   "fieldname": "numero_sesion",
+   "fieldtype": "Int",
+   "label": "Numero Sesion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_oazx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "encuentro_psicologo",
+   "fieldtype": "Link",
+   "label": "Encuentro Psicologo",
+   "options": "Encuentro Psicologo"
+  },
+  {
+   "fetch_from": "encuentro_psicologo.descripcion_del_encuentro",
+   "fieldname": "descripcion_encuentro",
+   "fieldtype": "Read Only",
+   "label": "Descripcion Encuentro"
+  },
+  {
+   "fieldname": "fecha_encuentro",
+   "fieldtype": "Date",
+   "label": "Fecha sesion"
+  },
+  {
+   "fieldname": "suma_puntuacion",
+   "fieldtype": "Read Only",
+   "label": "Suma Puntaje"
+  },
+  {
+   "fieldname": "section_break_yhov",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_yffy",
+   "fieldtype": "Table",
+   "options": "Tabla Estimulacion Transcraneal"
+  },
+  {
+   "fieldname": "puntos",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Puntos"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-30 23:35:07.848610",
+ "modified_by": "Administrator",
+ "module": "CERES",
+ "name": "Estimulacion Transcraneal",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

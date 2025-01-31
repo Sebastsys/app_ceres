@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:{encuentro_psicologico}-{####}",
  "creation": "2024-11-19 17:33:16.096085",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,10 +9,12 @@
   "naming_series",
   "patient",
   "patient_name",
+  "numero_sesion",
   "column_break_peca",
   "encuentro_psicologico",
   "descripcion_encuentro",
   "fecha_sesion",
+  "suma_puntuacion",
   "section_break_xjre",
   "eh_ansiedad"
  ],
@@ -38,7 +40,7 @@
   {
    "fetch_from": "patient.patient_name",
    "fieldname": "patient_name",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Nombre Paciente"
   },
   {
@@ -71,15 +73,27 @@
    "fieldtype": "Table",
    "label": "EH ANSIEDAD",
    "options": "Tabla EH ANSIEDAD"
+  },
+  {
+   "default": "0",
+   "fieldname": "numero_sesion",
+   "fieldtype": "Int",
+   "label": "Numero sesion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "suma_puntuacion",
+   "fieldtype": "Data",
+   "label": "Suma Puntuaci\u00f3n"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 23:04:21.675693",
+ "modified": "2025-01-30 21:44:46.457570",
  "modified_by": "Administrator",
  "module": "CERES",
  "name": "Escala Hamilton Ansiedad",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

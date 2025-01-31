@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:{encuentro_psicologico}-{####}",
  "creation": "2024-11-19 23:04:40.297934",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,10 +9,12 @@
   "naming_series",
   "patient",
   "patient_name",
+  "numero_sesion",
   "column_break_rxkc",
   "encuentro_psicologico",
   "descripcion",
   "fecha",
+  "suma_puntuacion",
   "section_break_jonz",
   "table_mhdv"
  ],
@@ -64,15 +66,26 @@
    "fieldtype": "Link",
    "label": "Paciente",
    "options": "Patient"
+  },
+  {
+   "fieldname": "numero_sesion",
+   "fieldtype": "Int",
+   "label": "Numero Sesion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "suma_puntuacion",
+   "fieldtype": "Data",
+   "label": "Suma Puntuaci\u00f3n"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-12 09:43:09.968973",
+ "modified": "2025-01-29 23:41:35.826463",
  "modified_by": "Administrator",
  "module": "CERES",
  "name": "ESCALA HAMILTON DEPRESION",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

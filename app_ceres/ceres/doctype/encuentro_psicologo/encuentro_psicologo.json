@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:EP-{YY}-{#####}",
  "creation": "2024-11-19 16:50:05.008057",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -51,6 +51,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "patient.nombre_completo",
    "fieldname": "patient_name",
    "fieldtype": "Data",
    "in_filter": 1,
@@ -164,11 +165,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 23:01:03.731534",
+ "modified": "2025-01-28 00:38:44.686668",
  "modified_by": "Administrator",
  "module": "CERES",
  "name": "Encuentro Psicologo",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
