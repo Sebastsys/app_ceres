@@ -22,15 +22,16 @@ class EstimulacionTranscraneal(Document):
 		for item in self.table_yffy:
 			suma += int(item.puntaje)
 		
-		if suma < 7:
-			self.suma_puntuacion = str(suma)+': No se detecta depresión'
-			self.puntos=suma
-		if suma >= 7 and suma <= 17:
-			self.suma_puntuacion = str(suma)+': Se detecta depresión leve'
-			self.puntos=suma
-		if suma >= 18 and suma <= 24:
-			self.suma_puntuacion = str(suma)+': Se detecta depresión moderada'
-			self.puntos=suma
-		if suma >= 25:
-			self.suma_puntuacion = str(suma)+': Se detecta depresión severa'
-			self.puntos=suma
+		#self.suma_puntuacion: campo editable para el usuario
+		#if suma < 7:
+		#	self.suma_puntuacion = str(suma)+': No se detecta depresión'
+		#	self.puntos=suma
+		#if suma >= 7 and suma <= 17:
+		#	self.suma_puntuacion = str(suma)+': Se detecta depresión leve'
+		#	self.puntos=suma
+		#if suma >= 18 and suma <= 24:
+		#	self.suma_puntuacion = str(suma)+': Se detecta depresión moderada'
+		#	self.puntos=suma
+		#if suma >= 25:
+		#	self.suma_puntuacion = str(suma)+': Se detecta depresión severa'
+		#	self.puntos=suma

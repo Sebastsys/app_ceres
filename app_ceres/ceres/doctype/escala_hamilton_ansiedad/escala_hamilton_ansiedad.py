@@ -25,11 +25,11 @@ class EscalaHamiltonAnsiedad(Document):
 			suma += int(item.puntaje)
 		
 		if suma < 17:
-			self.suma_puntuacion = str(suma)+': No se detecta ansiedad leve'
+			self.suma_puntuacion = str(suma)+': se detecta ansiedad leve'
 		if suma >= 18 and suma <= 24:
 			self.suma_puntuacion = str(suma)+': Se detecta ansiedad leve a moderada'
 			#frappe.throw(str(suma))
 		if suma >= 25 and suma <= 30:
-			self.suma_puntuacion = str(suma)+': Se detecta ansiedad moderada a grave'
+			self.suma_puntuacion = str(suma)+': Se detecta ansiedad moderada a severa'
 		if suma > 30:
-			self.suma_puntuacion = str(suma)+': Se detecta ansiedad grave'
+			self.suma_puntuacion = str(suma)+': Se detecta ansiedad severa'

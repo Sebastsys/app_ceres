@@ -20,10 +20,12 @@
   "section_break_ydpa",
   "descripcion_del_encuentro",
   "motivo_consulta",
+  "antecedentes_familires",
   "examen_mental",
   "presunto_diagnostico",
   "column_break_ddyo",
   "instrumentos_utilizados",
+  "historia_enfermedad",
   "observaciones",
   "plan_terapeutico",
   "dashboard_tab",
@@ -161,11 +163,21 @@
    "fieldname": "detalles_tab",
    "fieldtype": "Tab Break",
    "label": "Detalles"
+  },
+  {
+   "fieldname": "historia_enfermedad",
+   "fieldtype": "Text",
+   "label": "Historia Enfermedad"
+  },
+  {
+   "fieldname": "antecedentes_familires",
+   "fieldtype": "Small Text",
+   "label": "Antecedentes Familires"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-28 00:38:44.686668",
+ "modified": "2025-01-31 11:10:20.731154",
  "modified_by": "Administrator",
  "module": "CERES",
  "name": "Encuentro Psicologo",
