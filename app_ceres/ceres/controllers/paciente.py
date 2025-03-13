@@ -119,12 +119,12 @@ def sexo(paciente):
     sexo = """ SELECT tp.sex FROM tabPatient tp WHERE tp.patient_name = '{0}' """.format(paciente)
     return  frappe.db.sql(sexo, as_dict=False)[0]
 
-@frappe.whitelist()
-def get_permission_query_conditions_usuario(user)
-    if not user: user = frappe.session.user
-    if 'System Manager' in frappe.get_roles(user):
-        return ""
-    else:
-        usuario =frappe.get_doc("user",{"email":user})
+#@frappe.whitelist()
+#def get_permission_query_conditions_usuario(user)
+#    if not user: user = frappe.session.user
+#    if 'System Manager' in frappe.get_roles(user):
+#        return ""
+#    else:
+#        usuario =frappe.get_doc("user",{"email":user})
       
-        return """(name = '{0}' )""".format(usuario.email)
+#        return """(name = '{0}' )""".format(usuario.email)

@@ -86,7 +86,7 @@ doctype_js = {"Vital Signs" : "public/js/vitalsigns.js"}
 
 
 permission_query_conditions = {
-    "patient": "app_ceres.ceres.controllers.paciente.get_permission_query_conditions_usuario",
+    #"patient": "app_ceres.ceres.controllers.paciente.get_permission_query_conditions_usuario",
 }
 
 
