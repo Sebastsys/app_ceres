@@ -84,6 +84,13 @@ doctype_js = {"Vital Signs" : "public/js/vitalsigns.js"}
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
+
+permission_query_conditions = {
+    "patient": "app_ceres.ceres.controllers.paciente.get_permission_query_conditions_usuario",
+}
+
+
+
 # DocType Class
 # ---------------
 # Override standard doctype classes
